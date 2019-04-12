@@ -8,6 +8,8 @@
 </head>
 <body>
 <h3><a href="GoodsListServlet">商品管理</a></h3><br>
-<h3><a href="DealerListServlet">经销商管理</a></h3>
+<h3><a href="DealerListServlet">经销商管理</a></h3><br>
+<h3><a href="OrdersListServlet">订单管理</a></h3><br>
+<h3><a href="ConsoleListServlet">操作员管理</a></h3>
 </body>
 </html>

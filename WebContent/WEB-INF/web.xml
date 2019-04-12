@@ -39,4 +39,24 @@
     <servlet-name>DealerListServlet</servlet-name>
     <url-pattern>/DealerListServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OrdersListServlet</display-name>
+    <servlet-name>OrdersListServlet</servlet-name>
+    <servlet-class>com.dms.servlet.OrdersListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrdersListServlet</servlet-name>
+    <url-pattern>/OrdersListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConsoleListServlet</display-name>
+    <servlet-name>ConsoleListServlet</servlet-name>
+    <servlet-class>com.dms.servlet.ConsoleListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConsoleListServlet</servlet-name>
+    <url-pattern>/ConsoleListServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
