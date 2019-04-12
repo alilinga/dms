@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dms.domain.Console;
+import com.dms.domain.Console1;
 import com.dms.domain.Dealer;
 import com.dms.service.ConsoleService;
 import com.dms.service.DealerService;
@@ -23,7 +23,7 @@ public class ConsoleListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			ConsoleService service = new ConsoleServiceImpl();
-			List<Console> list = service.findAll();
+			List<Console1> list = service.findAll();
 			request.setAttribute("consolelist", list);
 			request.getRequestDispatcher("consolelist.jsp").forward(request, response);
 			

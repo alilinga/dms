@@ -59,4 +59,14 @@
     <servlet-name>ConsoleListServlet</servlet-name>
     <url-pattern>/ConsoleListServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GoodsAddServlet</display-name>
+    <servlet-name>GoodsAddServlet</servlet-name>
+    <servlet-class>com.dms.servlet.GoodsAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoodsAddServlet</servlet-name>
+    <url-pattern>/GoodsAddServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

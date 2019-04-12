@@ -1,6 +1,6 @@
 package com.dms.domain;
 
-public class Console {
+public class Console1 {
 	public int getCnumber() {
 		return cnumber;
 	}
@@ -43,7 +43,22 @@ public class Console {
 	public void setCname(String cname) {
 		this.cname = cname;
 	}
+	
 	private int cnumber;
+	public Console1(String cid, String csex, String cname, String cpassword, String ctel, String ccompany) {
+		super();
+		this.cid = cid;
+		this.csex = csex;
+		this.cname = cname;
+		this.cpassword = cpassword;
+		this.ctel = ctel;
+		this.ccompany = ccompany;
+	}
+
+	public Console1() {
+		super();
+	}
+
 	private String cid;
 	private String csex;
 	private String cname;

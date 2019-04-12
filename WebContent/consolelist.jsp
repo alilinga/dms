@@ -7,8 +7,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>操作员列表页面</title>
 </head>
+
 <body>
   <table border="1" width="700">
+  
+  <tr>
+  	<td>
+  		<a href="consoleadd.jsp">添加</a>
+  	</td>
+  </tr>
+  	
   <tr align="center">
 	<td>C序列号</td>
 	<td>编号</td>
@@ -18,15 +26,15 @@
 	<td>手机号</td>
 	<td>公司名称</td>
 </tr>
-  <c:forEach items="${consolelist }" var="console">
+  <c:forEach items="${consolelist }" var="console1">
   <tr align="center">
-	<td>${console.cnumber }</td>
-	<td>${console.cid }</td>
-	<td>${console.cname }</td>
-	<td>${console.csex }</td>
-	<td>${console.cpassword }</td>
-	<td>${console.ctel }</td>
-	<td>${console.ccompany }</td>
+	<td>${console1.cnumber }</td>
+	<td>${console1.cid }</td>
+	<td>${console1.cname }</td>
+	<td>${console1.csex }</td>
+	<td>${console1.cpassword }</td>
+	<td>${console1.ctel }</td>
+	<td>${console1.ccompany }</td>
 </tr>
   </c:forEach>
 </table>
