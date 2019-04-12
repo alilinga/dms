@@ -29,4 +29,14 @@
     <servlet-name>GoodsListServlet</servlet-name>
     <url-pattern>/GoodsListServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DealerListServlet</display-name>
+    <servlet-name>DealerListServlet</servlet-name>
+    <servlet-class>com.dms.servlet.DealerListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DealerListServlet</servlet-name>
+    <url-pattern>/DealerListServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
