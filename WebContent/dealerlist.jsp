@@ -12,6 +12,13 @@
 <body>
 
 <table border="1" width="700">
+
+  <tr>
+  	<td>
+  		<a href="dealeradd.jsp">添加</a>
+  	</td>
+  </tr>
+
 <tr align="center">
 	<td>D序列号</td>
 	<td>编号</td>

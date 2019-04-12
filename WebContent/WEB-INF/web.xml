@@ -69,4 +69,24 @@
     <servlet-name>GoodsAddServlet</servlet-name>
     <url-pattern>/GoodsAddServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DealerAddServlet</display-name>
+    <servlet-name>DealerAddServlet</servlet-name>
+    <servlet-class>com.dms.servlet.DealerAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DealerAddServlet</servlet-name>
+    <url-pattern>/DealerAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConsoleAddServlet</display-name>
+    <servlet-name>ConsoleAddServlet</servlet-name>
+    <servlet-class>com.dms.servlet.ConsoleAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConsoleAddServlet</servlet-name>
+    <url-pattern>/ConsoleAddServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

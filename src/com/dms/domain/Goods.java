@@ -39,5 +39,15 @@ public class Goods {
 	private String gname;
 	private String gtype;
 	private String gprice;
+	public Goods() {
+		super();
+	}
+	public Goods(String gid, String gname, String gtype, String gprice) {
+		super();
+		this.gid = gid;
+		this.gname = gname;
+		this.gtype = gtype;
+		this.gprice = gprice;
+	}
 
 }

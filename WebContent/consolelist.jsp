@@ -18,7 +18,7 @@
   </tr>
   	
   <tr align="center">
-	<td>C序列号</td>
+	<td>D序列号</td>
 	<td>编号</td>
 	<td>姓名</td>
 	<td>性别</td>

@@ -4,6 +4,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Dealer {
+	public Dealer() {
+		super();
+	}
+	public Dealer(String did, String dname, String dsex, String dpassword, String dtel, String demail, String daddress,
+			String dcompany) {
+		super();
+		this.did = did;
+		this.dname = dname;
+		this.dsex = dsex;
+		this.dpassword = dpassword;
+		this.dtel = dtel;
+		this.demail = demail;
+		this.daddress = daddress;
+		this.dcompany = dcompany;
+	}
 	public int getDnumber() {
 		return dnumber;
 	}
@@ -58,12 +73,6 @@ public class Dealer {
 	public void setDcompany(String dcompany) {
 		this.dcompany = dcompany;
 	}
-	public Set<Orders> getOrders() {
-		return orders;
-	}
-	public void setOrders(Set<Orders> orders) {
-		this.orders = orders;
-	}
 	private int dnumber;
 	private String did;
 	private String dname;
@@ -73,6 +82,6 @@ public class Dealer {
 	private String demail;
 	private String daddress;
 	private String dcompany;
-	private Set<Orders> orders = new HashSet<Orders>();
+
 		
 }

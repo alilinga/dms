@@ -12,6 +12,13 @@
 <body>
 
   <table border="1" width="700">
+  
+  <tr>
+  	<td>
+  		<a href="goodsadd.jsp">添加</a>
+  	</td>
+  </tr>
+  
   <tr align="center">
 	<td>gnumber</td>
 	<td>gid</td>

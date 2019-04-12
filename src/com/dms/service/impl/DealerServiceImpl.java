@@ -6,7 +6,9 @@ import java.util.List;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
+import com.dms.dao.ConsoleDao;
 import com.dms.dao.DealerDao;
+import com.dms.dao.impl.ConsoleDaoImpl;
 import com.dms.dao.impl.DealerDaoImpl;
 import com.dms.domain.Dealer;
 import com.dms.domain.Goods;
@@ -21,6 +23,14 @@ public class DealerServiceImpl implements DealerService {
 		QueryRunner runner = new QueryRunner(JDBCUtil.getDataSource());
 		return runner.query("select * from dealer", new BeanListHandler<Dealer>(Dealer.class));
 
+	}
+
+	@Override
+	public void insertDealer(Dealer dealer) throws SQLException {
+		DealerDao dao = new DealerDaoImpl();
+		dao.insertDealer(dealer);
+		
+		
 	}
 
 }

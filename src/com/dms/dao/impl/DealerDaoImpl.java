@@ -13,10 +13,29 @@ import com.dms.util.JDBCUtil;
 
 public class DealerDaoImpl implements DealerDao {
 
+	/*
+	 * 查询所有经销商
+	 * @throws SQLException
+	 */
 	@Override
 	public List<Dealer> findAll() throws SQLException {
 		QueryRunner runner = new QueryRunner(JDBCUtil.getDataSource());
 		return runner.query("select * from dealer", new BeanListHandler<Dealer>(Dealer.class));
+	}
+	@Override
+	public void insertDealer(Dealer dealer) throws SQLException {
+		QueryRunner runner = new QueryRunner(JDBCUtil.getDataSource());
+		runner.update("insert into dealer values(null , ?,?,?,?,?,?,?,?)" ,
+				dealer.getDid(),
+				dealer.getDname(),
+				dealer.getDsex(),
+				dealer.getDpassword(),
+				dealer.getDtel(),
+				dealer.getDemail(),
+				dealer.getDaddress(),
+				dealer.getDcompany()
+				);
+		
 	}
 
 }

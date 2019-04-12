@@ -14,7 +14,7 @@ import com.dms.util.JDBCUtil;
 public class GoodsDaoImpl implements GoodsDao {
 
 	/*
-	 * 查询所有学生
+	 * 查询所有商品
 	 * @throws SQLException
 	 */
 	@Override
@@ -22,6 +22,17 @@ public class GoodsDaoImpl implements GoodsDao {
 		QueryRunner runner = new QueryRunner(JDBCUtil.getDataSource());
 		return runner.query("select * from goods", new BeanListHandler<Goods>(Goods.class));
 
+	}
+
+	@Override
+	public void insertGoods(Goods goods) throws SQLException {
+		QueryRunner runner = new QueryRunner(JDBCUtil.getDataSource());
+		runner.update("insert into goods values(null , ?,?,?,?)" ,
+				goods.getGid(),
+				goods.getGname(),
+				goods.getGtype(),
+				goods.getGprice()
+				);		
 	}
 
 }
