@@ -7,6 +7,19 @@ public class Dealer {
 	public Dealer() {
 		super();
 	}
+	public Dealer(int dnumber,String did, String dname, String dsex, String dpassword, String dtel, String demail, String daddress,
+			String dcompany) {
+		super();
+		this.dnumber=dnumber;
+		this.did = did;
+		this.dname = dname;
+		this.dsex = dsex;
+		this.dpassword = dpassword;
+		this.dtel = dtel;
+		this.demail = demail;
+		this.daddress = daddress;
+		this.dcompany = dcompany;
+	}
 	public Dealer(String did, String dname, String dsex, String dpassword, String dtel, String demail, String daddress,
 			String dcompany) {
 		super();
@@ -19,6 +32,7 @@ public class Dealer {
 		this.daddress = daddress;
 		this.dcompany = dcompany;
 	}
+
 	public int getDnumber() {
 		return dnumber;
 	}
@@ -82,6 +96,5 @@ public class Dealer {
 	private String demail;
 	private String daddress;
 	private String dcompany;
-
-		
+	
 }

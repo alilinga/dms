@@ -22,22 +22,22 @@ import com.dms.service.impl.OrdersServiceImpl;
 public class OrdersListServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		try {
 			OrdersService service = new OrdersServiceImpl();
-			List<Orders> list = service.findAll();
-			
+			List<Orders> list=service.findAll(null);
 			request.setAttribute("orderslist", list);
 			request.getRequestDispatcher("orderslist.jsp").forward(request, response);
+			
 		} catch (SQLException e) {
-			e.printStackTrace();
+			// TODO: handle exception
 		}
 		
 	}
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+			doGet(request, response);
 	}
 
 }

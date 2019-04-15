@@ -1,27 +1,67 @@
 package com.dms.domain;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-public class Orders {
+import javax.xml.crypto.Data;
 
+public class Orders {
+	private int onumber;
+	private String oid;
+	private int gnumber;
+	private int dnumber;	
+	private String oquantity;
+	private String oprice;
+	private String odata;
+	private String ostate;	
+	private Goods goods;	
+	private String gname;
+	private String dname;
+	public Orders() {
+		super();
+	}
+	public Orders(String oid, int gnumber, int dnumber, String oquantity, String oprice,
+			String odata, String ostate) {
+		super();
+		this.oid = oid;
+		this.gnumber = gnumber;
+		this.dnumber = dnumber;
+		this.oquantity = oquantity;
+		this.oprice = oprice;
+		this.odata = odata;
+		this.ostate = ostate;
+	}
+	public Orders(int onumber,String oid, int gnumber, int dnumber, String oquantity, String oprice,
+			String odata, String ostate) {
+		super();
+		this.onumber=onumber;
+		this.oid = oid;
+		this.gnumber = gnumber;
+		this.dnumber = dnumber;
+		this.oquantity = oquantity;
+		this.oprice = oprice;
+		this.odata = odata;
+		this.ostate = ostate;
+	}
+	public Orders(int onumber, String oid, String gname, String dname, String oquantity, String oprice,
+			String odata, String ostate) {
+		super();
+		this.onumber=onumber;
+		this.oid = oid;
+		this.gname = gname;
+		this.dname = dname;
+		this.oquantity = oquantity;
+		this.oprice = oprice;
+		this.odata = odata;
+		this.ostate = ostate;
+	}
+	
 	public int getOnumber() {
 		return onumber;
 	}
 	public void setOnumber(int onumber) {
 		this.onumber = onumber;
-	}
-	public int getGnumber() {
-		return gnumber;
-	}
-	public void setGnumber(int gnumber) {
-		this.gnumber = gnumber;
-	}
-	public int getDnumber() {
-		return dnumber;
-	}
-	public void setDnumber(int dnumber) {
-		this.dnumber = dnumber;
 	}
 	public String getOid() {
 		return oid;
@@ -29,6 +69,13 @@ public class Orders {
 	public void setOid(String oid) {
 		this.oid = oid;
 	}
+	public int getGnumber() {
+		return gnumber;
+	}
+	public void setGnumber(int gnumber) {
+		this.gnumber = gnumber;
+	}
+
 	public String getOquantity() {
 		return oquantity;
 	}
@@ -53,13 +100,37 @@ public class Orders {
 	public void setOstate(String ostate) {
 		this.ostate = ostate;
 	}
-	private int onumber;
-	private int gnumber;
-	private int dnumber;
-	private String oid;
-	private String oquantity;
-	private String oprice;
-	private String odata;
-	private String ostate;	
 
+	public String getGname() {
+		return gname;
+	}
+	public void setGname(String gname) {
+		this.gname = gname;
+	}
+	public Goods getGoods() {
+		return goods;
+	}
+	public void setGoods(Goods goods) {
+		this.goods = goods;
+	}
+	public String getDname() {
+		return dname;
+	}
+	public void setDname(String dname) {
+		this.dname = dname;
+	}
+
+
+
+	public int getDnumber() {
+		return dnumber;
+	}
+
+
+
+	public void setDnumber(int dnumber) {
+		this.dnumber = dnumber;
+	}
+
+	
 }

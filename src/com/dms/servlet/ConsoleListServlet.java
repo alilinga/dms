@@ -25,17 +25,14 @@ public class ConsoleListServlet extends HttpServlet {
 			ConsoleService service = new ConsoleServiceImpl();
 			List<Console1> list = service.findAll();
 			request.setAttribute("consolelist", list);
-			request.getRequestDispatcher("consolelist.jsp").forward(request, response);
-			
+			request.getRequestDispatcher("consolelist.jsp").forward(request, response);			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
 		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

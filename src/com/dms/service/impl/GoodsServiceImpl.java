@@ -9,6 +9,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import com.dms.dao.ConsoleDao;
 import com.dms.dao.GoodsDao;
 import com.dms.dao.impl.ConsoleDaoImpl;
+import com.dms.dao.impl.DealerDaoImpl;
 import com.dms.dao.impl.GoodsDaoImpl;
 import com.dms.domain.Goods;
 import com.dms.service.GoodsService;
@@ -22,15 +23,41 @@ public class GoodsServiceImpl implements GoodsService {
 	 */
 	@Override
 	public List<Goods> findAll() throws SQLException {
-		QueryRunner runner = new QueryRunner(JDBCUtil.getDataSource());
-		return runner.query("select * from goods", new BeanListHandler<Goods>(Goods.class));
+		GoodsDaoImpl dao = new GoodsDaoImpl();
+		return dao.findAll();
 
 	}
 
 	@Override
 	public void insertGoods(Goods goods) throws SQLException {
 		GoodsDao dao = new GoodsDaoImpl();
-		dao.insertGoods(goods);
-		
+		dao.insertGoods(goods);	
 	}
+
+	@Override
+	public void deleteGoods(int gnumber) throws SQLException {
+		GoodsDao dao = new GoodsDaoImpl();
+		dao.deleteGoods(gnumber);
+	}
+
+	@Override
+	public Goods findGoodsByGnumber(int gnumber) throws SQLException {
+		GoodsDao dao = new GoodsDaoImpl();
+		return dao.findGoodsByGnumber(gnumber);
+	}
+
+	@Override
+	public void updateGoods(Goods goods) throws SQLException {
+
+		GoodsDao dao = new GoodsDaoImpl();
+		dao.updateGoods(goods);
+	}
+
+	@Override
+	public List<Goods> searchGoods(String gname) throws SQLException {
+		GoodsDao dao = new GoodsDaoImpl();
+		return dao.searchGoods(gname);
+	}
+	
+	
 }

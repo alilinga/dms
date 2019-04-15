@@ -44,8 +44,7 @@ public class Console1 {
 		this.cname = cname;
 	}
 	
-	private int cnumber;
-	public Console1(String cid, String csex, String cname, String cpassword, String ctel, String ccompany) {
+	public Console1(String cid, String cname, String csex, String cpassword, String ctel, String ccompany) {
 		super();
 		this.cid = cid;
 		this.csex = csex;
@@ -54,11 +53,22 @@ public class Console1 {
 		this.ctel = ctel;
 		this.ccompany = ccompany;
 	}
+	public Console1(int cnumber,String cid, String cname, String csex, String cpassword, String ctel, String ccompany) {
+		super();
+		this.cid = cid;
+		this.csex = csex;
+		this.cname = cname;
+		this.cpassword = cpassword;
+		this.ctel = ctel;
+		this.ccompany = ccompany;
+		this.cnumber=cnumber;
+	}
 
 	public Console1() {
 		super();
 	}
-
+	
+	private int cnumber;
 	private String cid;
 	private String csex;
 	private String cname;
